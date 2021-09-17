@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+<TextView
+    android:id="@+id/heading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Sign Up"
+    android:textSize="@dimen/text_size"
+    android:textColor="@color/purple_500"
+    android:textStyle="bold"
+    android:layout_margin="@dimen/text_left_margin"
+    android:padding="5dp"
+    android:drawablePadding="@dimen/text_left_margin"
+    app:drawableLeftCompat="@drawable/ic_baseline_login_24"
+    app:drawableStartCompat="@drawable/ic_baseline_login_24"
+    android:gravity="center_horizontal">
+
+</TextView>
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male">
+
+    </RadioButton>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female">
+
+    </RadioButton>
+</RadioGroup>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Web">
+
+        </RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android">
+
+        </RadioButton>
+    </RadioGroup>
+</LinearLayout>

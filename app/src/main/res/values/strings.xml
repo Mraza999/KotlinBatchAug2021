@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Theta Solutions</string>
+    <string name="_1">1</string>
+    <string name="testString">hello World</string>
+    <string name="Login">Login/SignIn</string>
+    <string name="enter_your_username">Please Enter Your Username</string>
+    <string name="enter_your_password">Please Enter Your Password</string>
+    <string name="login_btn">Authenticate Credentials</string>
+    <string name="logout_btn">Logout</string>
+    <string name="logout_btn_msg">Are you sure you want to logout?</string>
+</resources>

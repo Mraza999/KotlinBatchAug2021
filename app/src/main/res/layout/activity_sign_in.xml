@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/cancelIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_left_margin"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        app:drawableEndCompat="@drawable/ic_baseline_cancel_24" />
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Login"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/text_left_margin"
+        android:padding="5dp"
+        android:drawablePadding="@dimen/text_left_margin"
+        app:drawableLeftCompat="@drawable/ic_baseline_login_24"
+        app:drawableStartCompat="@drawable/ic_baseline_login_24"
+        android:gravity="center_horizontal">
+
+    </TextView>
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_username"
+        android:textColorHint="@color/purple_200"
+        android:layout_margin="@dimen/text_left_margin"
+
+        android:layout_below="@+id/heading"/>
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/purple_200"
+        android:layout_margin="@dimen/text_left_margin"
+        android:hint="@string/enter_your_username"
+        android:layout_below="@+id/heading"/>
+<TextView
+    android:id="@+id/SignUptext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="If Not Register? CLick Here"
+    android:textAlignment="center"
+    android:gravity="center_horizontal"
+    android:textSize="15sp"
+    android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_margin="@dimen/text_left_margin"
+        android:text="@string/login_btn"
+        />
+</LinearLayout>
