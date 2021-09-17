@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.KotlinBatchAug2021">
-        <activity android:name=".LifecycleActivity">
+        <activity android:name=".ImplicitIntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".LifecycleActivity">
+
         </activity>
-        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />
     </application>
