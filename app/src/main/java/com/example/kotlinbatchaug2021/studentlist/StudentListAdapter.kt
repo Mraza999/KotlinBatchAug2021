@@ -1,5 +1,6 @@
 package com.example.kotlinbatchaug2021.studentlist
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,14 +10,14 @@ import com.example.kotlinbatchaug2021.R
 import kotlinx.android.synthetic.main.student_item_view.view.*
 
 
-class StudentListAdapter: RecyclerView.Adapter<StudentListAdapter.studentViewHolder>() {
+class StudentListAdapter(var clicklistener:StudentClickListener): RecyclerView.Adapter<StudentListAdapter.studentViewHolder>() {
 
    var studentlist:List<Student> = listOf()
     //class for viewholder
     class studentViewHolder(view: View): RecyclerView.ViewHolder(view)
 
     //function to create view holder
-    //viewholder is list item design/holder which will hold data for evry list item
+    //viewholder is list item design/holder which will hold data for every list item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): studentViewHolder {
 
         //inflating list item design/xml
@@ -36,6 +37,15 @@ class StudentListAdapter: RecyclerView.Adapter<StudentListAdapter.studentViewHol
         holder.itemView.studentName.text=student.Name
         holder.itemView.department.text=student.Department
         holder.itemView.phoneNumber.text=student.PhoneNumber
+        holder.itemView.setOnClickListener{
+          clicklistener.OnClick(student)
+        }
+        holder.itemView.delete.setOnClickListener{
+           clicklistener.OnDelete(student)
+            holder.itemView.visibility=View.INVISIBLE
+        }
+
+
 
     }
 

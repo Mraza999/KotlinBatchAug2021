@@ -2,13 +2,14 @@ package com.example.kotlinbatchaug2021.studentlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinbatchaug2021.Model.Student
 import com.example.kotlinbatchaug2021.R
 import kotlinx.android.synthetic.main.activity_student_list.*
 
-class StudentListActivity : AppCompatActivity() {
-    val studentadapter=StudentListAdapter()
+class StudentListActivity : AppCompatActivity() , StudentClickListener {
+    val studentadapter=StudentListAdapter(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_list)
@@ -22,7 +23,6 @@ class StudentListActivity : AppCompatActivity() {
             //Adapter (adpater is used to hold and bind Item View with Data list)
             adapter=studentadapter
         }
-
     }
 
     //function to get StudentList
@@ -45,5 +45,13 @@ class StudentListActivity : AppCompatActivity() {
 
         //returning our list
         return List
+    }
+
+    override fun OnClick(student: Student) {
+        Toast.makeText(this,student.Name,Toast.LENGTH_LONG).show()
+    }
+
+    override fun OnDelete(student: Student) {
+
     }
 }
